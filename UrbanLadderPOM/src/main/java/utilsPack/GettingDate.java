@@ -9,3 +9,4 @@ public class GettingDate {
 		return date.toString().replaceAll(" ", "_").replaceAll(":", "_");
 	}
 }
+

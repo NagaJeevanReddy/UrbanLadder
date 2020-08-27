@@ -90,11 +90,11 @@ public class UrbanLadderTestClass extends BaseClass {
 
 		ExpectedTitle = ob.getCellData("VerifyingPageTitles", 0, 3);
 		pagebase.getTitle(ExpectedTitle);
-		bookshelvespage.bookshelf();
-		//bookshelvespage.bookshelves();
-		//bookshelvespage.updateExcel();
+		//bookshelvespage.bookshelf();
+		bookshelvespage.bookshelves();
+		bookshelvespage.updateExcel();
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

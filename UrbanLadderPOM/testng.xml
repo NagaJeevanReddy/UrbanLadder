@@ -10,7 +10,7 @@
 		</run>
 	</groups>
     <classes>
-      <class name="testPack.TestClass"/>
+      <class name="testPack.UrbanLadderTestClass"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

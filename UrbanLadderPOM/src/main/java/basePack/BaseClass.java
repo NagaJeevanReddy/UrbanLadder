@@ -4,20 +4,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaDriverService;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 
 import utilsPack.ExtentReporterManager;
+
 
 
 
@@ -59,7 +55,7 @@ public class BaseClass {
 				driver = new OperaDriver(qq);
 			} else {
 				System.out.println("Please enter from the following: chrome,ie,firefox");
-				Assert.fail("Invalid input");
+				//Assert.fail("Invalid input");
 			}
 			driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 			//driver.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
