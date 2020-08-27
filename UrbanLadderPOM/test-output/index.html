@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="Test4">Test4</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,7 +107,32 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="Test2">Test2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="Test3">Test3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="Test3">Test3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="Test4">Test4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="Test4">Test4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testPack.UrbanLadderTestClass" class="method navigator-link" hash-for-method="test1">test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -141,27 +152,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testPack.UrbanLadderTestClass</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Test4">
-                  </a> <!-- Test4 -->
-                  <span class="method-name">Test4</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Open Bookshelves: Check 4 Amazing Designs &amp; Buy Online - Urban Ladder] but found [Open Bookshelves: Check 7 Amazing Designs &amp; Buy Online - Urban Ladder]
-	at basePack.PageBase.getTitle(PageBase.java:81)
-	at testPack.UrbanLadderTestClass.Test4(UrbanLadderTestClass.java:92)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -177,9 +167,44 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="Test2">
+                  </a> <!-- Test2 -->
+                  <span class="method-name">Test2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="Test3">
                   </a> <!-- Test3 -->
                   <span class="method-name">Test3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test3">
+                  </a> <!-- Test3 -->
+                  <span class="method-name">Test3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test4">
+                  </a> <!-- Test4 -->
+                  <span class="method-name">Test4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test4">
+                  </a> <!-- Test4 -->
+                  <span class="method-name">Test4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1">
+                  </a> <!-- test1 -->
+                  <span class="method-name">test1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -200,8 +225,9 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;MS Edge Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;msedge&quot;/&gt;
     &lt;groups&gt;
       &lt;run&gt;
         &lt;include name=&quot;Smoke&quot;/&gt;
@@ -211,7 +237,19 @@
     &lt;classes&gt;
       &lt;class name=&quot;testPack.UrbanLadderTestClass&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- MS Edge Test --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Chrome Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;Smoke&quot;/&gt;
+        &lt;include name=&quot;Regression&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testPack.UrbanLadderTestClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Chrome Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -223,7 +261,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">MS Edge Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Chrome Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -285,28 +326,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test2')
+data.setCell(0, 1, 'test1')
 data.setCell(0, 2, 'testPack.UrbanLadderTestClass')
-data.setCell(0, 3, 30092);
+data.setCell(0, 3, 42195);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test1')
 data.setCell(1, 2, 'testPack.UrbanLadderTestClass')
-data.setCell(1, 3, 18426);
+data.setCell(1, 3, 41023);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Test3')
+data.setCell(2, 1, 'Test2')
 data.setCell(2, 2, 'testPack.UrbanLadderTestClass')
-data.setCell(2, 3, 17652);
+data.setCell(2, 3, 37167);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Test4')
+data.setCell(3, 1, 'Test2')
 data.setCell(3, 2, 'testPack.UrbanLadderTestClass')
-data.setCell(3, 3, 91);
+data.setCell(3, 3, 35749);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Test3')
+data.setCell(4, 2, 'testPack.UrbanLadderTestClass')
+data.setCell(4, 3, 29845);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Test3')
+data.setCell(5, 2, 'testPack.UrbanLadderTestClass')
+data.setCell(5, 3, 17724);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Test4')
+data.setCell(6, 2, 'testPack.UrbanLadderTestClass')
+data.setCell(6, 3, 13210);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'Test4')
+data.setCell(7, 2, 'testPack.UrbanLadderTestClass')
+data.setCell(7, 3, 10687);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -334,30 +391,52 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testPack.UrbanLadderTestClass</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">test0</span>
+                <span class="method-name">test0(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">test0(msedge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">test1</span>
-                <span class="method-start">18606 ms</span>
+                <span class="method-start">20571 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">test1</span>
+                <span class="method-start">25273 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test2</span>
-                <span class="method-start">37064 ms</span>
+                <span class="method-start">61743 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test2</span>
+                <span class="method-start">67476 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test3</span>
-                <span class="method-start">67162 ms</span>
+                <span class="method-start">97497 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
+                <span class="method-name">Test3</span>
+                <span class="method-start">104654 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">Test4</span>
-                <span class="method-start">84822 ms</span>
+                <span class="method-start">122387 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test4</span>
+                <span class="method-start">127356 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">84941 ms</span>
+                <span class="method-start">135604 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">138051 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

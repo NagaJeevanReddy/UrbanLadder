@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
- <test name="Test">
+<suite name="Suite" parallel="tests">
+
+<!--  <test name="MS Edge Test" >
+ <parameter name="browser" value="msedge"/>
 	<groups>
 		<run>
 			<include name="Smoke" />
 			<include name="Regression" />
-
 		</run>
 	</groups>
     <classes>
       <class name="testPack.UrbanLadderTestClass"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  -->
+  <test name="Chrome Test">
+ <parameter name="browser" value="chrome"/>
+	<groups>
+		<run>
+			<include name="Smoke" />
+			<include name="Regression" />
+		</run>
+	</groups>
+    <classes>
+      <class name="testPack.UrbanLadderTestClass"/>
+    </classes>
+  </test> 
 </suite> <!-- Suite -->

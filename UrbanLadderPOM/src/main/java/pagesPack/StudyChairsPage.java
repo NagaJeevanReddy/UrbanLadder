@@ -1,6 +1,7 @@
 package pagesPack;
 
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,8 +19,8 @@ public class StudyChairsPage extends PageBase {
 	ReadExcelDataFile ob = new ReadExcelDataFile(
 			System.getProperty("user.dir") + "\\src\\main\\resources\\objectRepository\\UrbanLadder.xlsx");
 
-	public StudyChairsPage(WebDriver driver, ExtentTest logger) {
-		super(driver, logger);
+	public StudyChairsPage(WebDriver driver, ExtentTest logger,Properties prop) {
+		super(driver, logger, prop);
 	}
 
 	@FindBy(xpath = "//div[@class='product-info-block']/descendant::a[@class='product-title-block']")
@@ -79,8 +80,11 @@ public class StudyChairsPage extends PageBase {
 			reportFail(e.getMessage());
 			System.out.println(e.getMessage());
 		}
-		BookShelvesPage bookshelvespage = new BookShelvesPage(driver, logger);
+		BookShelvesPage bookshelvespage = new BookShelvesPage(driver, logger,prop);
 		PageFactory.initElements(driver, bookshelvespage);
 		return bookshelvespage;
 	}
+	
 }
+
+

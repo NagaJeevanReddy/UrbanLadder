@@ -3,6 +3,7 @@ package basePack;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -25,17 +26,18 @@ public class PageBase extends BaseClass {
 //	public ExtentTest logger;
 	
 
-	public PageBase(WebDriver driver, ExtentTest logger) {
+	public PageBase(WebDriver driver, ExtentTest logger,Properties prop) {
 		this.driver=driver;
 		this.logger=logger;
+		this.prop=prop;
 	}
 
 	//It opens the website
-	public LandingPage openWebsite(String WebsiteURL) {
-		driver.get(WebsiteURL);
+	public LandingPage openWebsite(String urlKey) {
+		driver.get(prop.getProperty(urlKey));
 		logger.log(Status.INFO, "Opening website");
 		
-		LandingPage landingpage = new LandingPage(driver, logger);
+		LandingPage landingpage = new LandingPage(driver, logger,prop);
 		PageFactory.initElements(driver, landingpage);
 		return landingpage;
 	}

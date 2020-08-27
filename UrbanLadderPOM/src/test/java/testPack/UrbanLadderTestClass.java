@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -25,33 +26,35 @@ public class UrbanLadderTestClass extends BaseClass {
 	BookShelvesPage bookshelvespage;
 
 	@BeforeTest(groups = { "Smoke" })
-	public void test0() {
+	@Parameters("browser")
+	public void test0(String browser) {
 		//logger = report.createTest("browser");
 
-		openBrowser(ob.getCellData("Input", 0, 1));
+		openBrowser(browser);
 
 	}
 
 	@Test(priority = 0, groups = { "Smoke" })
+
 	public void test1() {
 
 		logger = report.createTest("opening website");
 
-		PageBase pagebase = new PageBase(driver, logger);
+		PageBase pagebase = new PageBase(driver, logger, prop);
 		PageFactory.initElements(driver, pagebase);
 
-		landingpage = pagebase.openWebsite(ob.getCellData("Input", 1, 1));
+		landingpage = pagebase.openWebsite("url");
 		ExpectedTitle = ob.getCellData("VerifyingPageTitles", 0, 0);
+		ExpectedTitle=prop.getProperty("landingpage");
 		pagebase.getTitle(ExpectedTitle);
 	}
 
 	@Test(priority = 1, groups = { "Smoke", "Regression" })
 	public void Test2() {
 		logger = report.createTest("search for study chair");
-		PageBase pagebase = new PageBase(driver, logger);
+		PageBase pagebase = new PageBase(driver, logger, prop);
 		PageFactory.initElements(driver, pagebase);
-		ExpectedTitle = ob.getCellData("VerifyingPageTitles", 0, 1);
-		pagebase.getTitle(ExpectedTitle);
+		
 
 		logger.log(Status.INFO, "closing login pop-up");
 		landingpage.closeLoginPopUp();
@@ -70,14 +73,13 @@ public class UrbanLadderTestClass extends BaseClass {
 	@Test(priority = 2, groups = { "Smoke", "Regression" })
 	public void Test3() {
 		logger = report.createTest("getting top three chair details");
-		PageBase pagebase = new PageBase(driver, logger);
+		PageBase pagebase = new PageBase(driver, logger, prop);
 		PageFactory.initElements(driver, pagebase);
-		ExpectedTitle = ob.getCellData("VerifyingPageTitles", 0, 2);
-		pagebase.getTitle(ExpectedTitle);
-
+		
 		studychairspage.topThreeChairs();
 		studychairspage.moveMouseHover();
 		bookshelvespage = studychairspage.clickOnOpenBooksShelves();
+		//bookshelvespage=studychairspage.enterTxtOnSearchBox();
 		logger.log(Status.INFO, "got top three chair details");
 		pagebase.takeScreenShot();
 	}
@@ -85,10 +87,10 @@ public class UrbanLadderTestClass extends BaseClass {
 	@Test(priority = 3, groups = { "Smoke", "Regression" })
 	public void Test4() {
 		logger = report.createTest("opening book shelves page");
-		PageBase pagebase = new PageBase(driver, logger);
+		PageBase pagebase = new PageBase(driver, logger, prop);
 		PageFactory.initElements(driver, pagebase);
 
-		ExpectedTitle = ob.getCellData("VerifyingPageTitles", 0, 3);
+		ExpectedTitle = prop.getProperty("bookshelvespage");
 		pagebase.getTitle(ExpectedTitle);
 		//bookshelvespage.bookshelf();
 		bookshelvespage.bookshelves();

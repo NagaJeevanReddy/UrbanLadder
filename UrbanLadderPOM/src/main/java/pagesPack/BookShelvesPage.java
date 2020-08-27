@@ -2,6 +2,7 @@ package pagesPack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,8 +24,8 @@ public class BookShelvesPage extends PageBase {
 	ReadExcelDataFile ob = new ReadExcelDataFile(
 			System.getProperty("user.dir") + "\\src\\main\\resources\\objectRepository\\UrbanLadder.xlsx");
 	
-	public BookShelvesPage(WebDriver driver, ExtentTest logger) {
-		super(driver, logger);
+	public BookShelvesPage(WebDriver driver, ExtentTest logger,Properties prop) {
+		super(driver, logger, prop);
 	}
 
 	@FindBy(xpath = "//div[@class='product-title product-title-sofa-mattresses']/span")

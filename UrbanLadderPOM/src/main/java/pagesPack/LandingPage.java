@@ -1,5 +1,7 @@
 package pagesPack;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +13,8 @@ import basePack.PageBase;
 
 public class LandingPage extends PageBase {
 
-	public LandingPage(WebDriver driver, ExtentTest logger) {
-		super(driver, logger);
+	public LandingPage(WebDriver driver, ExtentTest logger,Properties prop) {
+		super(driver, logger, prop);
 	}
 
 	@FindBy(xpath = "//div[@class='popup-text text-center vert large-6 columns']/a[1]")
@@ -56,7 +58,7 @@ public class LandingPage extends PageBase {
 			System.out.println(e.getMessage());
 		}
 
-		StudyChairsPage scp = new StudyChairsPage(driver, logger);
+		StudyChairsPage scp = new StudyChairsPage(driver, logger,prop);
 		PageFactory.initElements(driver, scp);
 		return scp;
 	}
