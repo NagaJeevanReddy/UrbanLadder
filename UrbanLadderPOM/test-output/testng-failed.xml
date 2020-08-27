@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Chrome Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <groups>
       <run>
         <include name="Smoke"/>
@@ -11,11 +12,14 @@
     <classes>
       <class name="testPack.UrbanLadderTestClass">
         <methods>
+          <include name="Test2"/>
+          <include name="test1"/>
+          <include name="Test3"/>
           <include name="test0"/>
           <include name="closeBrowser"/>
           <include name="Test4"/>
         </methods>
       </class> <!-- testPack.UrbanLadderTestClass -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
